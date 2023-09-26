@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/font/flaticon.css">
+      <link rel="stylesheet" href="css/media-queries.css">
+      <link rel="stylesheet" href="genel.css">
+  </head>
+    <style>
+   
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <a href="homepage.html">
+        <img src="logo.png" class="logo" >
+      </a>
+
+  <ul>
+    <li><a href="homepage.html">Ana Sayfa</a></li>
+    <li><a href="iletisim.html">Iletisim</a></li>
+    <li><a href="cocukluk.html">Hakkimizda</a></li>
+    <li><a href="index.html">Giris Yap</a></li>
+  </ul>
+</div>
+<nav>
+
+</nav>
+</header>
+<main>
+<section class="grid-container blogpost-img-container">
+    <img src="aglamak.jpg" alt="">
+</section>
+<section class="blogpost-main-container">
+    <div class="grid-container">
+
+        <article>
+            <h1><i>2022 OLDU NE DEĞİŞTİ?</i></h1><br/><br/>
+           <font size="4">2022 yılına girmiş olmak gerçeği yüzüme vurdu: Birincisi, zaman gerçekten çok hızlı geçiyor. İkincisi, artık doğru düzgün kendime zaman ayırmıyorum. Neden ayırmadığımla ilgili bahanelerden bahsetmeyeceğim size. O bahaneleri kendime bile anlatmaktan sıkıldım çünkü. En iyisi ben 2020’yi özet geçeyim, siz anlayın.</font><br/><br/>
+            <font size="4">2020 başlarken kendime ciddi hedefler koymuştum.Spor yapacağım dedim sadece yürümeyi spor edindim.12 kitap okuyacağım dedim toplasan 3 kitap okumuşdur belki.Programlama da kendimi geliştireceğim dedim, bölüm dersleri dışında hiçbir şeye çalışmadım da öğrenemedim de.</font>
+            <font size="4">Valla oturdum yazıyorum ama aramızda kalsın, siz yabancı değilsiniz, ne anlatacağımı şu an ben de bilmiyorum. Ne yaşadım ben son bir senedir? Bir düşünelim, bayağı bir düşünelim...</font>
+        </article>
+    </div>
+</section>
+
+<section class="contact-main-container">
+  <div class="contact-left">
+    <section id="wrapper">
+      <div class="box1">
+        <div class="row">
+          <div class="col-6">
+            <div class="comment1">
+          <p v-for="items in item" v-text="items"></p>
+            </div>
+            </div>
+            </div>
+            <textarea type="text" class="input" placeholder="E-mail" v-model="newItem" @keyup.enter="addItem()"></textarea>
+            <textarea type="text" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+        
+
+            <button v-on:click="addItem()" class='btn-box2' type="submit">MESAJINI BANA İLET</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</main>
+</body>
+</html>

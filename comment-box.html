@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+  background: rgb(255, 255, 255);
+  font-family: montserrat;
+}
+        .box {
+    	max-width: 500px;
+    	margin: 30px auto;
+    	background: rgb(255, 255, 255);
+    	border-radius: 8px;
+    	padding: 20px;
+    }
+            .comment {
+    	display: block;
+    	transition: all 1s;
+    }
+    .afterText {
+    	min-height: 0px;
+    	border: 1px solid rgb(255, 255, 255);
+    	border-radius: 5px;
+    	padding: 5px 10px
+    }
+            .box textarea {
+    	width: 100%;
+    	border: none;
+    	background: #262626;
+    	padding: 15px;
+    	height: 50%;
+    	border-radius: 5px;
+    	transition: all 0.5s;
+    	margin-top: 15px;
+    	color: #fff;
+    	font-family: montserrat;
+    }
+            button.btn-box {
+    	background: #262626;
+    	color: #fff;
+    	padding: 20px 25px;
+    	border: none;
+    	cursor: pointer;
+    	text-transform: uppercase;
+    	letter-spacing: 4px;
+    	transition: 1s all;
+    	font-size: 10px;
+    	border-radius: 5px;
+    	margin-top: 30px;
+    }
+    </style>
+</head>
+<body>
+        <section id="wrapper">
+        <div class="box">
+          <div class="row">
+            <div class="col-6">
+              <div class="comment">
+            <p v-for="items in item" v-text="items"></p>
+              </div>
+              </div>
+              </div>
+              <textarea type="text" class="input" placeholder="E-Mail" v-model="newItem" @keyup.enter="addItem()"></textarea>
+              <textarea type="text" class="input" placeholder="Kullanıcı Adı" v-model="newItem" @keyup.enter="addItem()"></textarea>
+          <div class="row">
+           
+            <div class="col-6">
+              
+          <textarea type="text" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+              <button v-on:click="addItem()" class='btn-box' type="submit">Your Comment</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <script>
+            $(document).ready(function(){ 
+     
+        $(".btn-box").on('click', function(){
+        $(".comment").addClass("afterText");
+      });
+      $("textarea").on('keyup.enter', function(){
+        $(".comment").addClass("afterText");
+      });
+      });
+     
+    new Vue({
+        el: "#wrapper",
+        data:{
+          newItem: '',
+          item: [],
+        },
+        methods:{
+          addItem  (){
+          this.item.push(this.newItem);
+            this.newItem = "";
+          }
+      }
+     
+      });
+    </script>
+</body>
+</html>

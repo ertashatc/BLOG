@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/font/flaticon.css">
+      <link rel="stylesheet" href="css/media-queries.css">
+      <link rel="stylesheet" href="genel.css">
+  </head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <a href="homepage.html">
+        <img src="logo.png" class="logo" >
+      </a>
+
+  <ul>
+    <li><a href="homepage.html">Ana Sayfa</a></li>
+    <li><a href="iletisim.html">Iletisim</a></li>
+    <li><a href="cocukluk.html">Hakkimizda</a></li>
+    <li><a href="index.html">Giris Yap</a></li>
+  </ul>
+</div>
+<main class="blogs-main">
+  <section class="blogs-news-container">
+      <div class="grid-container blogs-main-new">
+          <div class="blogs-news-img-container"><br/><br/>
+              <img src="cocukluk.png" alt="">
+          </div>
+          <div class="blogs-news-info-container">
+            <article class="post-container">
+              <h2>Ben Neymişim?</h2>
+              <p>2001 <br/><br/>
+                Doğduğumda susmuşum ben. Ağlamamışım diğer insan yavruları gibi.
+                Tam orada sigaraya başlamışım. O anda babam gelip elimde sigarayla görünce, “ulan şerefsiz, önce bi nefes al, oksijen çek ciğerine” deyip dövmüş beni.
+                Daha yakmadan sigarayı bırakmışım.</p>
+              <a href="cocukluk.html" class="blogs-button">Devamı..</a>
+            </article>
+          </div>
+      </div>
+  </section>
+  
+  <section class="blogs-posts-container">
+    <br/><br/>
+    <div class="grid-container">
+        <article class="post-container">
+            <img src="kotuyil.jpg" alt="">
+            <p>2022 RAPORU</p>
+            <p>2022’nin ilk gününden merhaba. Bugün kendimi iyi hissediyorum. 
+              Neden bilmiyorum, yılbaşı gecesinde anlamsız bir karamsarlık hali vardı üzerimde ama sabah olduğunda,
+              son birkaç sayfasını hor kullandığım bir defterde temiz bir sayfaya geçmiş gibi huzurluydum.
+              Çok şükür, hayatımda iyi giden bir şey yok..
+        </p>
+            <a href="kotuyil.html" class="blogs-button">Devamı..</a>
+        </article>
+        <article class="post-container">
+            <img src="2022jpg.jpg" alt="">
+            <p>2022 oldu ne değişti?</p>
+            <p>2022 yılına girmiş olmak gerçeği yüzüme vurdu:
+              Birincisi, zaman gerçekten çok hızlı geçiyor. İkincisi, artık doğru düzgün kendime zaman ayırmıyorum. 
+              Neden ayırmadığımla ilgili bahanelerden bahsetmeyeceğim size.
+               O bahaneleri kendime bile anlatmaktan sıkıldım çünkü..</p>
+            <a href="2022.html" class="blogs-button">Devamı..</a>
+        </article>
+        <article class="post-container">
+            <img src="gelecek.jpg" alt="">
+            <p>Geleceğe Mektup </p>
+            <p>Merhaba gelecekteki insanlar, bugün 2023 yılındayız.
+              Elimizden düşürmediğimiz ve adına cep telefonu dediğimiz küçük bilgisayarlarla size merhaba diyorum.
+              Bu yazımda sizlerle birlikte biraz yol alarak , hep birlikte kalp kırıklarımıza destek olalım ve gelecekteki bize bir not bırakalım.
+             </p>
+            <a href="gelecek.html" class="blogs-button">Devamı..</a>
+        </article>
+    </div>
+</section>
+<section class="contact-main-container">
+      <div class="contact-left">
+        <section id="wrapper">
+          <div class="box1">
+            <div class="row">
+              <div class="col-6">
+                <div class="comment1">
+              <p v-for="items in item" v-text="items"></p>
+                </div>
+                </div>
+                </div>
+                <textarea type="text" class="input" placeholder="E-mail" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                <textarea type="email" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                <button v-on:click="addItem()" class='btn-box2' type="submit">MESAJINI BANA İLET</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  </div>
+  <script> $(document).ready(function(){ 
+     
+    $(".btn-box").on('click', function(){
+    $(".comment1").addClass("afterText");
+  });
+  $("textarea").on('keyup.enter', function(){
+    $(".comment1").addClass("afterText");
+  });
+  });
+ 
+new Vue({
+    el: "#wrapper",
+    data:{
+      newItem: '',
+      item: [],
+    },
+    methods:{
+      addItem  (){
+      this.item.push(this.newItem);
+        this.newItem = "";
+      }
+  }
+ 
+  });</script>
+  <script src="app.js"></script>
+  
+  </div>
+</section>
+</main>
+</body>
+</html>

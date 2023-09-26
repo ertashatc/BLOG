@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="genel.css">
+</head>
+<body>
+        <section id="wrapper">
+        <div class="box1">
+          <div class="row">
+            <div class="col-6">
+              <div class="comment1">
+            <p v-for="items in item" v-text="items"></p>
+              </div>
+              </div>
+              </div>
+              <textarea type="text" class="input" placeholder="Kullanıcı Adı" v-model="newItem" @keyup.enter="addItem()"></textarea>
+          <div class="row">
+            <div class="col-6">
+          <textarea type="text" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+              <button v-on:click="addItem()" class='btn-box2' type="submit">GÖNDER</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <script>
+            $(document).ready(function(){ 
+     
+        $(".btn-box2").on('click', function(){
+        $(".comment1").addClass("afterText1");
+      });
+      $("textarea").on('keyup.enter', function(){
+        $(".comment1").addClass("afterText1");
+      });
+      });
+     
+    new Vue({
+        el: "#wrapper",
+        data:{
+          newItem: '',
+          item: [],
+        },
+        methods:{
+          addItem  (){
+          this.item.push(this.newItem);
+            this.newItem = "";
+          }
+      }
+     
+      });
+    </script>
+</body>
+</html>

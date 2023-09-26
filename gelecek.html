@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/font/flaticon.css">
+      <link rel="stylesheet" href="css/media-queries.css">
+      <link rel="stylesheet" href="genel.css">
+  </head>
+    <style>
+   
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <a href="homepage.html">
+      <img src="logo.png" class="logo" >
+    </a>
+
+
+  <ul>
+    <li><a href="homepage.html">Ana Sayfa</a></li>
+    <li><a href="iletisim.html">Iletisim</a></li>
+    <li><a href="cocukluk.html">Hakkimizda</a></li>
+    <li><a href="index.html">Giris Yap</a></li>
+  </ul>
+</div>
+<nav>
+
+</nav>
+</header>
+<main>
+<section class="grid-container blogpost-img-container">
+    <img src="gelecegemektup.jpg" alt="">
+</section>
+<section class="blogpost-main-container">
+    <div class="grid-container">
+
+        <article>
+            <h1><i>GELECEĞE MEKTUP</i></h1>
+            <font size="4">Merhaba gelecekteki insanlar, bugün 2023 yılındayız. Elimizden düşürmediğimiz ve adına cep telefonu dediğimiz küçük bilgisayarlarla size merhaba diyorum. Bu yazımda sizlerle birlikte biraz yol alarak, hep birlikte kalp kırıklarımıza destek olalım ve gelecekteki bize bir not bırakalım. </font>
+            <font size="4">Eminim daha önce aynı duyguyu yaşayanlarımız oldu. Dayanamayıp kalemi elinize aldınız.</font>
+            <font size="4">Gelelim en önemli konuya, ne yazardınız ,bundan tam 10 yıl sonra tekrar kendinizle karşılaşsanız ne yapmasını ister neyi tembiihlersiniz.Bakalım 10 yıl sonraki ben neleri duymaya hazırlanıyor.. </font> 
+            <font size="4"><b><i>Sevgili 10 yıl sonraki ben:</i></b> <br/><br/> Öncelikle delicesine kendin ol. Gidebildiğin kadar uzaklara, gidebildiğin kadar farklı diyalarlara git. Eğer hala yaşıyorsan bu dünya senin için keşfetmen için geç değil. Korkmadan gez,kimseyi dinlemeden, nasıl başaracağım diye düşünmeden doyasıya gez. </font>
+            <font size="4">Ve sen, yani sevgili ben, bugün yapabileceğin her şeyin en iyisini yaptığına dair için rahat mı? Gerçekten her anım dolu doluydu diyebiliyor musun? </font><br/>
+            <font size="4"><b><i>Sevgili 10 yıl sonraki halim, bu mektubu okuduğunda beni ve bugünü hatırla....</i></b></font>
+        </article>
+    </div>
+</section>
+
+
+<section class="contact-main-container">
+  <div class="contact-left">
+    <section id="wrapper">
+      <div class="box1">
+        <div class="row">
+          <div class="col-6">
+            <div class="comment1">
+          <p v-for="items in item" v-text="items"></p>
+            </div>
+            </div>
+            </div>
+            <textarea type="text" class="input" placeholder="E-mail" v-model="newItem" @keyup.enter="addItem()"></textarea>
+            <textarea type="text" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+        
+
+            <button v-on:click="addItem()" class='btn-box2' type="submit">MESAJINI BANA İLET</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</main>
+</body>
+</html>

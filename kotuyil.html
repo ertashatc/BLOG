@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/font/flaticon.css">
+      <link rel="stylesheet" href="css/media-queries.css">
+      <link rel="stylesheet" href="genel.css">
+  </head>
+    <style>
+   
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <a href="homepage.html">
+        <img src="logo.png" class="logo" >
+      </a>
+  <ul>
+    <li><a href="homepage.html">Ana Sayfa</a></li>
+    <li><a href="iletisim.html">Iletisim</a></li>
+    <li><a href="cocukluk.html">Hakkimizda</a></li>
+    <li><a href="index.html">Giris Yap</a></li>
+  </ul>
+</div>
+<nav>
+
+</nav>
+</header>
+<main>
+<section class="grid-container blogpost-img-container">
+    <img src="2022.jpg" alt="">
+</section>
+<section class="blogpost-main-container">
+    <div class="grid-container">
+
+        <article>
+            <h1><i>2020 RAPORU</i></h1>
+           <font size="4">2022’nin ilk gününden merhaba. Bugün kendimi iyi hissediyorum. Neden bilmiyorum, yılbaşı gecesinde anlamsız bir karamsarlık hali vardı üzerimde ama sabah olduğunda, son birkaç sayfasını hor kullandığım bir defterde temiz bir sayfaya geçmiş gibi huzurluydum. Çok şükür, hayatımda iyi giden bir şey yok, sadece hızlıca geçip giden zaman içimdeki geç kalmışlık hissini körüklüyor. Bu arada neye geç kaldığımla ilgili bir fikrim de yok.</font><br/><br/>
+            <font size="4">Zaman yönetimi konusunda berbat olduğumu zaten biliyordum ama artık tamamen emin oldum. Beynim, zaman hesabı yaparken geçmiş tecrübelerinden faydalanmak yerine her defasında gerçek olamayacak kadar iyimser bir hesaplama yaparak beni yanıltıyor. Bir – iki saat içinde bitirebileceğimi düşündüğüm bir iş- beş altı saat sürüyor.Şu çekmece çok dağılmış bir toparlayayım, en fazla on beş dakikamı alır diyorum, işim en az iki saat sonra bitiyor.07:40 alarmı çalıyor, saat sekizde yataktan çıkmış olmam lazım, beynim “çeyrek geçe kalkar, yarım saatte giyinip çıkar yetişirsin” diyor. “Telefon numaranız terör örgütünün eline geçmiş, hesabınızdaki tüm parayı bize gönderin” diyen dolandırıcıya inanıp 67 yıllık birikimini gönderen emekli öğretmen gibi her seferinde bu yalana inanıyorum.Sonuç olarak kendimi saat 08:30’da, bir türlü gelmek bilmeyen otobüse küfrederken buluyorum.</font>
+           
+        </article>
+    </div>
+</section>
+
+<section class="contact-main-container">
+  <div class="contact-left">
+    <section id="wrapper">
+      <div class="box1">
+        <div class="row">
+          <div class="col-6">
+            <div class="comment1">
+          <p v-for="items in item" v-text="items"></p>
+            </div>
+            </div>
+            </div>
+            <textarea type="text" class="input" placeholder="E-mail" v-model="newItem" @keyup.enter="addItem()"></textarea>
+            <textarea type="text" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+        
+
+            <button v-on:click="addItem()" class='btn-box2' type="submit">MESAJINI BANA İLET</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</main>
+</body>
+</html>

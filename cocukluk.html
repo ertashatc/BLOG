@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/font/flaticon.css">
+      <link rel="stylesheet" href="css/media-queries.css">
+      <link rel="stylesheet" href="genel.css">
+  </head>
+    <style>
+ 
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <a href="homepage.html">
+        <img src="logo.png" class="logo" >
+      </a>
+
+  <ul>
+    <li><a href="homepage.html">Ana Sayfa</a></li>
+    <li><a href="iletisim.html">Iletisim</a></li>
+    <li><a href="cocukluk.html">Hakkimizda</a></li>
+    <li><a href="index.html">Giris Yap</a></li>
+  </ul>
+</div>
+<main>
+    <section class="grid-container blogpost-img-container">
+        <img src="cocukluk.png" alt="">
+    </section>
+    <section class="blogpost-main-container">
+        <div class="grid-container">
+            <article>
+                <h1><i>BEN NEYMİŞİM?</i></h1>
+                <font color="grey " size="5">2001</font>
+                <br/><br/>
+                <font size="4">Doğduğumda susmuşum ben. Ağlamamışım diğer insan yavruları gibi.
+                    Tam orada sigaraya başlamışım. O anda babam gelip elimde sigarayla görünce, “ulan şerefsiz, önce bi nefes al, oksijen çek ciğerine” deyip dövmüş beni.
+                    Daha yakmadan sigarayı bırakmışım.</font>
+                    <br/><br/>
+
+                    <font color="grey " size="5">2008</font>
+                    <br/><br/>
+                    <font size="4">Tam o sıralar babam kanıma girmiş, gel okula yazılalım diye.
+                     Ben de onun aklına uyup okula yazılmışım.
+                        </font>
+                        <br/><br/>
+                        <font color="grey " size="5">2016</font>
+                <br/><br/>
+                <font size="4">Lise bir başlamış ve aklıma gelen başıma gelmiş. Matematikten geçemez,
+                     bu dersten nefret eder olmuşum.
+                      Ne olursa olsun sayısal okuycam, bilgisayar mühendisi olucam demişim.
+                       Onuncu sınıfta gidip sayısal bölümü seçip, hayatımın geri kalanında bol bol karşılaşacağım, 
+                       “tamam da ne alaka” dedirtecek türden gereksiz dönüm noktalarının birincisinin altına imzamı atmışım.
+                    </font>
+                    <br/><br/>
+                    <font color="grey " size="5">2019</font>
+                <br/><br/>
+                <font size="4">Lise sona geçtiğimde imana gelip namaza başlamışım. Bu arada corona illeti ortaya çıkınca ettiğim küfürler 
+                    kazandığım sevapları götürmüş,hatta borçlu çıkmışım. 
+                    Kendi kendime “Kızım, bilgisayar mühendisi olucam diye bunca sene yedin milleti, şimdi nah olursun” demişim. 
+                    Hatta bu fikirde gerçekçi çıkıp tercih yaparken “İstanbul'da da okunur mu?” diyerek kutuplardan soğuk Sivas'ı en başa yazarak hayatımın en büyük hatasını yapmışım.
+                    </font>
+                    <br/><br/>
+                    <font color="grey " size="5">2021</font>
+                    <br/><br/>
+                    <font size="4">Tam her şey ne kadar güzel gidiyor, hayatımız sonunda yoluna girecek derken, gecenin beşinde gelen bir telefonla, aynı evde yaşadığım büyükbabamı kaybetmişim.
+                        Bir üstteki paragraftan önce okuduklarınızı yazan neşeli insanı büyük oranda kaybetmişim.
+                        “Ölüm bir eve girince sağ kalanları da biraz öldürüyor” demiş Peyami Safa. 
+                        Bu söz, on kitabın anlatamayacağını anlatır bana.
+                         Fakat tümüyle hayata küsmek olmaz, metanetli davranıp içinde bulunduğum duruma şükretmişim.
+                        </font>
+                        <br/><br/>
+
+
+            </article>
+        </div>
+    </section>
+    <section class="contact-main-container">
+        <div class="contact-left">
+          <section id="wrapper">
+            <div class="box1">
+              <div class="row">
+                <div class="col-6">
+                  <div class="comment1">
+                <p v-for="items in item" v-text="items"></p>
+                  </div>
+                  </div>
+                  </div>
+                  <textarea type="text" class="input" placeholder="E-mail" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                  <textarea type="text" class="input" placeholder="Your Comment Here" v-model="newItem" @keyup.enter="addItem()"></textarea>
+              
+  
+                  <button v-on:click="addItem()" class='btn-box2' type="submit">MESAJINI BANA İLET</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+    </div>
+</main>
+</body>
+</html>
